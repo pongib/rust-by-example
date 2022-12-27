@@ -1,10 +1,6 @@
 fn main() {
-    let x;
-    if true {
-        x = 1;
-    } else {
-        x = 2;
+    for number in [1, 2, 3] {
+        println!("{number}!");
     }
-
-    println!("x is {x}");
+    println!("LIFTOFF!!!");
 }

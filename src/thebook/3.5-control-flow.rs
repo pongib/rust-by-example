@@ -33,7 +33,7 @@ fn main() {
     println!("Number is {number}");
 }
 
-// assign later in condition
+// assign later in condition and shorthand
 fn main() {
     let x;
     if true {
@@ -41,6 +41,9 @@ fn main() {
     } else {
         x = 2;
     }
+    println!("x is {x}");
 
+    // shorthand is
+    let x = if true { 1 } else { 2 };
     println!("x is {x}");
 }

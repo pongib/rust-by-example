@@ -1,15 +1,19 @@
 #[derive(Debug)]
-struct Rectangle {
-    width: u32,
-    height: u32,
+
+struct Point {
+    x: i32,
+    y: i32,
 }
-
+impl Point {
+    fn get_x(&mut self) -> &mut i32 {
+        &mut self.x
+    }
+}
 fn main() {
-    let scale = 2;
-    let rect1 = Rectangle {
-        width: dbg!(30 * scale),
-        height: 50,
-    };
-
-    dbg!(&rect1);
+    let mut p = Point { x: 1, y: 2 };
+    let x = p.get_x();
+    *x += 1;
+    // println!("{} {}", *x, p.y);
+    println!("{}", p.y);
+    println!("{}", *x);
 }

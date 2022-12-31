@@ -1,19 +1,5 @@
-#[derive(Debug)]
-
-struct Point {
-    x: i32,
-    y: i32,
-}
-impl Point {
-    fn get_x(&mut self) -> &mut i32 {
-        &mut self.x
-    }
-}
 fn main() {
-    let mut p = Point { x: 1, y: 2 };
-    let x = p.get_x();
-    *x += 1;
-    // println!("{} {}", *x, p.y);
-    println!("{}", p.y);
-    println!("{}", *x);
+    let some_number = Some(5);
+    let some_char = Some('3');
+    let absent_value: Option<u32> = None;
 }

@@ -1,5 +1,11 @@
 fn main() {
-    let some_number = Some(5);
-    let some_char = Some('3');
-    let absent_value: Option<u32> = None;
+    let dice_roll = 9;
+    match dice_roll {
+        3 => add_fancy_hat(),
+        7 => remove_fancy_hat(),
+        _ => (), // just do nothing
+    }
+
+    fn add_fancy_hat() {}
+    fn remove_fancy_hat() {}
 }

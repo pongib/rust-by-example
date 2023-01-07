@@ -1,11 +1,16 @@
+enum Location {
+    Point(i32),
+    Range(i32, i32),
+}
+
 fn main() {
-    let dice_roll = 9;
-    match dice_roll {
-        3 => add_fancy_hat(),
-        7 => remove_fancy_hat(),
-        _ => (), // just do nothing
+    fn print_range_max(loc: &Location) {
+        // print the second field of Range, if loc is a Range
+        if let Location::Range(_, second) = loc {
+            println!("{}", second);
+        }
     }
 
-    fn add_fancy_hat() {}
-    fn remove_fancy_hat() {}
+    let location = Location::Range(10, 20);
+    print_range_max(&location)
 }
